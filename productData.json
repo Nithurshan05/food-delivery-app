@@ -1,0 +1,34 @@
+{
+    "products": [
+    {
+    "id": 1,
+    "name": "Pizza",
+    "category": "food",
+    "description": "Chicken with Cheese",
+    "image": "https://example.com/images/pizza.jpg",
+    "price": "$50",
+    "rating": 4.5,
+    "reviews": 120
+    },
+    {
+    "id": 2,
+    "name": "Coke",
+    "category": "drink",
+    "description": "Coke Zero - No Sugar",
+    "image": "https://example.com/images/coke.jpg",
+    "price": "$10",
+    "rating": 4.8,
+    "reviews": 234
+    },
+    {
+    "id": 3,
+    "name": "Burger",
+    "category": "food",
+    "description": "Double Chicken",
+    "image": "https://example.com/images/burger.jpg",
+    "price": "$30",
+    "rating": 4.0,
+    "reviews": 85
+    }
+    ]
+    }
