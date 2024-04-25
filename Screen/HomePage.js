@@ -60,7 +60,7 @@ export default function HomePage() {
           </View>
 
           {/* SearchBar */}
-          {/* <View 
+          <View 
           style= {{
             flexDirection: 'row',
             backgroundColor: 'lightblue',
@@ -80,7 +80,7 @@ export default function HomePage() {
               paddingLeft: 10,
               padding: 3,
             }}/>
-          </View> */}
+          </View>
 
           {/* <ScrollView vertical>
           {productData.map((products, index) => (
