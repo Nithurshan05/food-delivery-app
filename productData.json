@@ -5,30 +5,96 @@
     "name": "Pizza",
     "category": "food",
     "description": "Chicken with Cheese",
-    "image": "https://example.com/images/pizza.jpg",
+    "image": "https://salasdaily.com/cdn/shop/products/cheese-burst-pizza2_460x@2x.jpg?v=1669967224",
     "price": "$50",
     "rating": 4.5,
-    "reviews": 120
+    "reviews": 120,
+    "time":"15mins",
+    "del_time":"30mins"
     },
     {
-    "id": 2,
+    "id": 2,    
     "name": "Coke",
     "category": "drink",
     "description": "Coke Zero - No Sugar",
-    "image": "https://example.com/images/coke.jpg",
+    "image": "https://thumbs.dreamstime.com/z/london-uk-june-bottle-diet-coca-cola-white-coca-cola-one-most-popular-soda-products-world-london-uk-june-118182127.jpg?ct=jpeg",
     "price": "$10",
     "rating": 4.8,
-    "reviews": 234
+    "reviews": 234,
+    "time":"15mins",
+    "del_time":"30mins"
     },
-    {
+    { 
     "id": 3,
     "name": "Burger",
     "category": "food",
     "description": "Double Chicken",
-    "image": "https://example.com/images/burger.jpg",
+    "image": "https://img.freepik.com/premium-photo/double-chicken-burger-isolated-black-background_1021632-338.jpg",
     "price": "$30",
     "rating": 4.0,
-    "reviews": 85
+    "reviews": 85,
+    "time":"15mins",
+    "del_time":"30mins"
+    },
+    { 
+    "id": 4,
+    "name": "Veg Salad",
+    "category": "Fast Food",
+    "description": "Fresh Vegitables with avagado",
+    "image": "https://media.istockphoto.com/id/1454741285/photo/roast-fish-and-vegetable-salad-on-wooden-background.jpg?s=612x612&w=0&k=20&c=Slmk-RLvdR3317E5W2UKLul4y1ZH3axjL2XCNOBZbhE=",
+    "price": "$20",
+    "rating": 4.1,
+    "reviews": 91,
+    "time":"15mins",
+    "del_time":"30mins"
+    },
+    {
+    "id":5 ,
+    "name": "Egg Salad",
+    "category": "Fast Food",
+    "description": "Egg with Fresh Vegitables",
+    "image": "https://media.istockphoto.com/id/1194610986/photo/breakfast-boiled-egg-and-vegetables.jpg?s=612x612&w=0&k=20&c=einlXn_jecDxr8vLHmWlWYdpt8R1djSoFRW1zRM_lnk= ",
+    "price": "$40",
+    "rating": 4.5,
+    "reviews": 80,
+    "time":"15mins",
+    "del_time":"30mins"
+    },
+    {
+    "id":6 ,
+    "name": "Mango Juice",
+    "category": "Drinks",
+    "description": "Fresh Mango Juice with Some Mango Slices",
+    "image": "https://media.istockphoto.com/id/904617420/photo/fresh-mango-smoothie-in-the-glass.jpg?s=612x612&w=0&k=20&c=ogIRn5AfahJNU4W8UmQIZ-mJqL9tgOm9yH_-5WJmkSQ=",
+    "price": "$10",
+    "rating": 4.6,
+    "reviews": 180,
+    "time":"15mins",
+    "del_time":"30mins"
+    },
+    {
+    "id":7 ,
+    "name": "Hydrabad Briyani",
+    "category": "Briyani",
+    "description": "Special Hydrabad Briyani",
+    "image": "https://t3.ftcdn.net/jpg/04/41/20/18/360_F_441201852_XQqp1wbAQj9udOC3iT7D0ahKgaf71bns.jpg",
+    "price": "$55",
+    "rating": 4.8,
+    "reviews": 160,
+    "time": "15mins",
+    "del_time": "30mins"
+    },
+    {
+    "id":8 ,
+    "name": "Dum Briyani",
+    "category": "Briyani",
+    "description": "Indian Special Dum Briyani",
+    "image": "https://thumbs.dreamstime.com/b/traditional-hyderabadi-chicken-dum-biryani-made-basmati-rice-cooked-masala-spices-served-onion-raita-selective-focus-223722336.jpg",
+    "price": "$50",
+    "rating": 4.6,
+    "reviews": 152,
+    "time":"15mins",
+    "del_time":"30mins"
     }
     ]
-    }
+}

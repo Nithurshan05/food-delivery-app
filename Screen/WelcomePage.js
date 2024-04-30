@@ -1,18 +1,20 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from "react-native";
+import product from "../productData.json";
 
-export default function WelcomePage({ Navigation }) {
+const WelcomePage = ({navigation}) => {
+  console.log(product);
   return (
     <View style={styles.container}>
       <Image source={require("../assets/Welcome Image.webp")}></Image>
-      <Text style={styles.WelcomeText}>Foodie</Text>
-      <TouchableOpacity onPress={() => Navigation.navigate("HomePage")} style={styles.GetStart}>
+      <Text style={styles.WelcomeText}>Foodie Boy</Text>
+      <TouchableOpacity onPress={() => navigation.navigate("HomeScreen")} style={styles.GetStart}>
         <Text style={styles.GetStartText}>Get Start</Text>
-      </TouchableOpacity>
+      </TouchableOpacity>     
     </View>
   );
 }
-
+export default WelcomePage;
 const styles = StyleSheet.create({
   container: {
     flex: 1,

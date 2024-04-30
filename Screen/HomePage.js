@@ -1,18 +1,22 @@
-import { StyleSheet, View, Text, SafeAreaView, ScrollView, Image, TouchableOpacity, TextInput, fontSize } from 'react-native';
-import React, { useState, useEffect } from 'react';
+import { StyleSheet, View, Text, SafeAreaView, ScrollView, Image, TouchableOpacity, TextInput, Dimensions } from 'react-native';
+import React,{useState} from 'react';
 import * as Icon from "react-native-feather";
-// import productData from '../productData.json';
+import categoryTitle from './Data/categoryTitle';
+import product from '../productData.json';
 
 
-export default function HomePage() {
-  // const [product,setProduct] = useState(0);
-  
+const { width } = Dimensions.get("window");
+
+const ITEM_WIDTH = width / 2 - 20 ;
+
+
+const HomeScreen = ({navigation}) => {
+  console.log(product);
+  const [activeCategory, setActiveCategory] = useState(0);
+
   return (
     <ScrollView>
       <SafeAreaView>
-
-        
- 
         {/* Statusbar */}
 
         <View style = {{padding: "20"}}>
@@ -28,7 +32,7 @@ export default function HomePage() {
               source = {require("../assets/Images/PRofilePic.webp")}/>
               <Text 
               style = {{
-                fontSize: 17,
+                
                 fontWeight: "800",
                 color: "black",
                 marginTop: 10,
@@ -81,33 +85,126 @@ export default function HomePage() {
               padding: 3,
             }}/>
           </View>
+                {/* ADD SLIDE VIEW */}
+                <View style={{}}>
+                  <ScrollView>
+                  <TouchableOpacity style={{ width: ITEM_WIDTH, marginBottom: 20, marginLeft:10, marginRight:10 }}>
+                  {product.map(products =>{return(<View style={{width:'100%', height:50, flexDirection:'row', justifyContent:'space-between'}}>
+                  <Image
+                  style={{
+                    width: "100%",
+                    height: 50, 
+                    borderRadius:30, 
+                    marginRight:10
+                    
+                  }}
+                  source={products.image}
+                />
+                  </View>);
+        })}
+                  </TouchableOpacity>
+                  </ScrollView>
+                </View>
 
           {/* <ScrollView vertical>
-          {productData.map((products, index) => (
+          {ProductData.map((products, index) => (
               <TouchableOpacity style ={{
               }}
               key={index}
               onpress ={() => setActiveCategory(index)}>
-                Image: {products.id}
+                <Text style={[
+                  ]}>
+                    {products.image}
+                  </Text>
               </TouchableOpacity>
             ))}
             </ScrollView> */}
 
           {/* ProductData */}
-          {/* <ScrollView horizontal>
-            {productData.map((products, index) => (
+          <ScrollView horizontal>
+
+            
+
+            {categoryTitle.map((categories, index) => (
               <TouchableOpacity style ={{
                 marginLeft:20,
                 marginRight:20,
               }}
               key={index}
               onpress ={() => setActiveCategory(index)}>
-                <Image source = {products.image}/>
+                <Text style={[
+                  {
+                    fontSize:17,
+                    fontWeight: '600',
+                    color: 'gray'
+                  },
+                  activeCategory === index &&{
+                    color:'black',
+                    fontWeight: '700',
+                    fontSize:19
+                  },
+                  ]}>
+                    {categories.title}
+                  </Text>
+              </TouchableOpacity>
+            ))}           
+          </ScrollView>
+
+          {/* SampleData */}
+          <View
+            style={{
+              flexDirection: "row",
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+              marginVertical: 20,
+            }}
+            
+          >
+            {categoryTitle[activeCategory].products.map((item) => (
+              <TouchableOpacity
+                style={{ width: ITEM_WIDTH, marginBottom: 20, marginLeft:10, marginRight:10 }}
+                key={item.id}
+              >
+                <Image
+                  style={{
+                    width: "100%",
+                    height: ITEM_WIDTH + 30,
+                    borderRadius: 20,
+                  }}
+                  source={{uri:item.image}}
+                />
+                <Text
+                  style={{
+                    fontSize: 20,
+                    fontWeight: "700",
+                    marginTop: 10,
+                  }}
+                >
+                  {item.name}
+                </Text>
+                <Text
+                  style={{
+                    fontSize: 15,
+                    color: "gray",
+                    
+                  }}
+                >
+                {item.description}
+                </Text>
+                <Text style={{ fontSize: 20, fontWeight: "700" }}>
+                  Price: {item.price} 
+                </Text>
+                <Text style={{ fontSize: 20, fontWeight: "400", color:'gray'  }}>
+                Rate: {item.rating}
+                </Text>
+
               </TouchableOpacity>
             ))}
-          </ScrollView> */}
+          </View>
         </View>
       </SafeAreaView>
     </ScrollView>
   );
-}
+};
+
+export default HomeScreen;

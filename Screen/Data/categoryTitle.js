@@ -1,25 +1,25 @@
-import products from "./ProductData";
+import data from "../../productData.json";
 
 const categories = [
     {
         id:1,
         title:"All",
-        products: products,
+        products: data.products,
     },
     {
         id:2,
         title:"Fast Foods",
-        products: [...products.slice(1,3)],
+        products: [...data.products.slice(1,3,4,5)],
     },
     {
         id:3,
         title:"Briyani",
-        products: [...products.slice()],
+        products: [...data.products.slice(7,8)],
     },
     {
         id:4,
         title:"Drinks",
-        products: [...products.slice(2)],
+        products: [...data.products.slice(2,6)],
     }
 ];
 
